@@ -1,0 +1,25 @@
+<odoo>
+  <data>
+    <!-- saitolab.todo tree view -->
+    <record id="todo_view_tree" model="ir.ui.view">
+      <field name="name">saitolab.todo.view.tree</field>
+      <field name="model">saitolab.todo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="status"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- saitolab.todo action window -->
+    <record id="todo_view_action" model="ir.actions.act_window">
+      <field name="name">Lista de Tareas</field>
+      <field name="res_model">saitolab.todo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="todo_menu_act" action="saitolab_todo.todo_view_action"/>
+  </data>
+</odoo>
