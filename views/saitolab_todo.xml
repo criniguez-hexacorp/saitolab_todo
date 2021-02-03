@@ -12,6 +12,22 @@
       </field>
     </record>
 
+    <!-- saitolab.todo form view -->
+    <record id="todo_view_form" model="ir.ui.view">
+      <field name="name">saitolab.todo.view.form</field>
+      <field name="model">saitolab.todo</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name" string="Descripción"/>
+              <field name="status" string="Estado"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
     <!-- saitolab.todo action window -->
     <record id="todo_view_action" model="ir.actions.act_window">
       <field name="name">Lista de Tareas</field>
